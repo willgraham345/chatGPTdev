@@ -29,32 +29,32 @@ def main():
 
     # Get the metadata of the PDF file
 
-    metadata = reader.metadata() # not a function, just a bunch of stuff
+    # metadata = reader.metadata() # not a function, just a bunch of stuff
 
-    for key, value in metadata:
-        print(f"{key}: {value}")
+    # for key, value in metadata:
+        # print(f"{key}: {value}")
 
 
 
     # get the outlines of the PDF file
-    outline = reader.outline()
+    # outline = reader.outline()
 
-    print(f"The PDF document has {len(outline)} outline(s).")
+    # print(f"The PDF document has {len(outline)} outline(s).")
 
 
 
     # # Read text from each page
 
-    # for page_num in range(num_pages):
+    for page_num in range(num_pages):
 
-    #     page = reader.pages[page_num]
+        page = reader.pages[page_num]
 
-    #     page_text = page.extract_text()
+        page_text = page.extract_text()
         
 
-    #     # Print the text from the current page
+        # Print the text from the current page
 
-    #     print(f"Page {page_num + 1}:\n{page_text}\n")
+        print(f"Page {page_num + 1}:\n{page_text}\n")
 
 
     # Close the PDF file
